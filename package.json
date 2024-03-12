@@ -1,9 +1,12 @@
 {
   "name": "electron-angular-boilerplate",
   "version": "0.0.0",
+  "main": "dist/main.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve -o",
+    "start": "ng build & tsc & electron .",
+    "start-electron": "tsc & electron .",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -27,6 +30,7 @@
     "@angular/cli": "^17.2.3",
     "@angular/compiler-cli": "^17.2.0",
     "@types/jasmine": "~5.1.0",
+    "electron": "^29.1.1",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -34,5 +38,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.3.2"
-  }
+  },
+  "type": "module"
 }
